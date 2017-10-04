@@ -1,14 +1,14 @@
-<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <link rel="stylesheet" href="/css/daterangepicker.css" type="text/css">
   <script type="text/javascript" src="js/moment.js"></script> 
-      <script type="text/javascript" src="js/daterangepicker.js"></script>
+      <script type="text/javascript" src="js/daterangepicker.js"></script> -->
 <style>
 #reportrange
 {
@@ -99,12 +99,32 @@ float:right;
 	<div id="content-area" role="main">
 	<div class="col-sm-12">
 	<div class="col-sm-2">
-<ul class="nav nav-navbar nav1">
+<!--<ul class="nav nav-navbar nav1">
 <li><a href="#/home">Dashboard</a></li>
 <li ><a href="#/orderstatus">Orders</a></li>
 <li ><a href="#/invoicesearch">Invoices</a></li>
 <li class="active"><a href="#/claimssearch">Claims</a></li>
-</ul>
+</ul> -->
+<nav class="navbar navbar-custom sidebar" role="navigation"> 
+        <div>
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>      
+        </div>
+        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+        <ul class="nav nav-navbar nav1">
+        <li><a href="#/home">Dashboard</a></li>
+        <li><a href="#/orderstatus">Orders</a></li>
+        <li><a href="#/invoicesearch">Invoices</a></li>
+        <li class="active"><a href="#/claimssearch">Claims</a></li>
+        </ul>
+        </div>
+        </div>
+        </nav>
 <br>
 <br>
 <div>
@@ -131,7 +151,7 @@ float:right;
 <label>Claims Data</label>
 </div>
 	<div class="table1">
-<table width="100%" class="table-bordered table-responsive order-items">
+<table width="100%" class="table-bordered table-responsive order-items footable table">
 	<thead class="thead">
 		<th>Order #</th>
 		<th>Claims Date</th>
@@ -166,17 +186,5 @@ float:right;
 	</div>
 	</div>
 </div>
- <script type="text/javascript" src="js/DateValidation.js"></script>
-        <script type="text/javascript" src="js/daterangepicker.js"></script>
-		<script type="text/javascript">
-                  function Date1() {
-				 // alert("in function");
-                     var date = document.getElementById("reportrange").value
-                  var arr = date.split("-");
-                  var x = arr[1].trim();
-                     document.getElementById("datepickerfrom").value = arr[0];
-                   document.getElementById("datepicker").value = x;
-                                }
-                                                    </script>
 	</div>
 	

@@ -197,3 +197,27 @@ body.checkout-material-order-pre #material-hold-items td.price {
   width: 18%; }
 body.checkout-material-order-pre #material-hold-items td.actions {
   width: 9%; }
+
+  /*@media screen and (max-width: 600px) { */
+   /* table {width:100%;}
+    thead {display: none;}
+    tr:nth-of-type(2n) {background-color: inherit;}
+    tr thead:td:nth-child(n) td:first-child {background: #f0f0f0; font-weight:bold;font-size:1.3em;}
+    tbody td {display: block;  text-align:center; }
+    tbody td:before { 
+        content: attr(data-label); 
+        display: block;
+        text-align:left;  
+      }*/
+     /* table, thead, tbody, th, td, tr{
+        display: block;
+        width:100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float:left;
+        clear:left;
+        }
+    }  */
+
+   

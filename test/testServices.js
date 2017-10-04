@@ -7,8 +7,7 @@ var expect = require('chai').expect;
 var Q = require('q');
 var callback = sinon.spy();
 var MongoMock = require("mongomock");
-var dealerCollection = {"dealer":[{"dealerName" : "Usharani Kotyada","type" : "dealer","dealerId" : "d002","Email" : "ukotyada@miraclesoft","Password" : "Ukotyada","Phone" : "7660917458","marketSegment" : "Residential","country" : "United States","state" : "Washington"}]
-};
+var dealerCollection = {"dealer":[{"dealerName" : "Usharani Kotyada","type" : "dealer","dealerId" : "d002","Email" : "ukotyada@miraclesoft.com","Password" : "Ukotyada","Phone" : "7660917458","marketSegment" : "Residential","country" : "United States","state" : "Washington"}]};
 var mongo = new MongoMock(dealerCollection);
 
 var cb = function(err,val)
@@ -28,6 +27,7 @@ var MongoStub = {
     
 };
 var appStub  = proxyquire(".././app.js",{'mongodb':MongoStub}); 
+
 describe('Services Test', function () {
 
     describe('Test Login', function () {
@@ -36,10 +36,11 @@ describe('Services Test', function () {
         it('should validate login users', function(done)
         {
            //var result= appStub.post(authenticateCustomer');
-           request(appStub).get('/authenticateCustomer').send({Email:'ukotyada',Password:'Ukotyada'})
+           request(appStub).get('/authenticateCustomer').query({Email:'ukotyada@miraclesoft.com',Password:'Ukotyada'})
            .end(function(err,res){
               expect(JSON.parse(res.text).output).to.be.not.null;
               expect(JSON.parse(res.text).output).to.be.an('array');
+              expect(JSON.parse(res.text).output).to.be.length(1);
               done();
            });
         });

@@ -1,14 +1,14 @@
-<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
  <link rel="stylesheet" href="/css/daterangepicker.css" type="text/css">
   <script type="text/javascript" src="js/moment.js"></script> 
       <script type="text/javascript" src="js/daterangepicker.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" /> -->
+      
 <style>
 #reportrange
 {
@@ -104,12 +104,32 @@ float:right;
 	<div id="content-area" role="main">
 	<div class="col-sm-12">
 	<div class="col-sm-2">
-<ul class="nav nav-navbar nav1">
+<!--<ul class="nav nav-navbar nav1">
 <li><a href="#/home">Dashboard</a></li>
 <li ><a href="#/orderstatus">Orders</a></li>
 <li class="active"><a href="#/invoicesearch">Invoices</a></li>
 <li><a href="#/claimssearch">Claims</a></li>
-</ul>
+</ul> -->
+<nav class="navbar navbar-custom sidebar" role="navigation"> 
+        <div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>      
+        </div>
+        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+          <ul class="nav nav-navbar nav1">
+            <li><a href="#/home">Dashboard</a></li>
+            <li><a href="#/orderstatus">Orders</a></li>
+            <li class="active"><a href="#/invoicesearch">Invoices</a></li>
+            <li><a href="#/claimssearch">Claims</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 <br>
 <label class="search1">Search By Invoice Number </label>
@@ -144,13 +164,13 @@ float:right;
 <label>Invoices Data</label>
 </div>
 	<div class="table1">
-	<table width="100%" border="0" class="table-bordered table-responsive order-items">
+	<table width="100%" border="0" class="table-bordered table-responsive order-items footable table">
 		<thead class="thead">
-		<th>Invoice #</th>
+		<th data-toggle="true">Invoice #</th>
 		<th>Invoice Type</th>
-		<th>Order #</th>
+		<th data-hide="phone">Order #</th>
 		<th>Invoice Date</th>
-		<th>B/L #</th>
+		<th data-hide="phone">B/L #</th>
 		<th>Customer #</th>
 	</thead>
 	<tr ng-repeat="o in filteredorder">
